@@ -6,6 +6,11 @@ __author__ = 'I322233'
 # f.write(content)
 # f.close()
 # print (content)
+
+history = open('user_bought_history.txt')
+for line in history:
+    print(line)
+
 def find_item(line,item):
     if(line.find(item,0,len(line)) == -1):
         return 0
@@ -42,10 +47,10 @@ def find_match_count(test_item):
         count = count+1
     return count
 
-test_items = open("test_items.txt")
-for item in test_items:
-    itemc = item[:-1]
-    count = find_match_count(itemc)
-    print(itemc + ' : '+ str(count))
-test_items.close()
+# test_items = open("test_items.txt")
+# for item in test_items:
+#     itemc = item[:-1]
+#     count = find_match_count(itemc)
+#     print(itemc + ' : '+ str(count))
+# test_items.close()
 
